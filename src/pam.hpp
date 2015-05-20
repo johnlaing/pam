@@ -11,8 +11,8 @@ public:
   bool authenticate(std::string username_, std::string password_);
 private:
   // disable copy constructors
-  PamTransaction(const PamTransaction& other) {}
-  PamTransaction& operator=(const PamTransaction& other) {}
+  PamTransaction(const PamTransaction& other);
+  PamTransaction& operator=(const PamTransaction& other);
 
   pam_handle_t* pamh = NULL;
   std::string username;
